@@ -1,1 +1,96 @@
+div {
+  background-color: #6DD47E;
+  border-style: solid;
+  border-color: #293250;
+  border-width: 5px;
+}
 
+div.wrapper {
+  border: none;
+  background-color: #FFD55A;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 60px 420px;
+  grid-auto-rows: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 7%;
+  color: #293250;
+  text-align: center;
+}
+
+.abs {
+  position: absolute;
+  top: 70px;
+  right: 1170px;
+  background-color: #6DD47E;
+  color: #293250;
+  font-size: 25px;
+  text-align: center;
+}
+
+body {
+  background-color: #FFD55A;
+} 
+
+p { 
+  font-weight: bold;
+}
+
+.item1 {
+  background-color: #FFD55A;
+  border-color: #FFD55A;
+}
+.item3 {
+  background-color: #FFD55A;
+  border-color: #FFD55A;
+}
+.item7 {
+  background-color: #FFD55A;
+  border-color: #FFD55A;
+}
+.item9 {
+  background-color: #FFD55A;
+  border-color: #FFD55A;
+}
+    
+   
+    
+    
+    
+    ul.nav {
+  list-style-type: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: firebrick;
+  margin: 0;
+  padding: 0;
+}
+    
+    li.nav{
+  display: inline;
+  padding: 10px;
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+  font-size: 120%;
+}
+
+li a:hover {
+  background-color: #f77f00;
+  font-size: 130%;
+  color: black;
+}
+    
+
+@media only screen and (max-width: 1000px) {
+  body{
+    background-color:#FFD55A
+  }
