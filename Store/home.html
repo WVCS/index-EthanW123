@@ -1,1 +1,246 @@
+<html>
+  
+      <div id="entireDiv">
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete">
+    <input id="myInput" type="text" name="myCountry" placeholder="Seach Bar">
+  </div>
+</form>
+        
+  <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Info</strong> Welcome! This week we have a Buy 2 Get One Free deal
+</div>
+  
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+  <ul class="nav"> 
+    <li class="nav"><a href="../index.html"> Home </a></li>
+    <li class="nav"><a href="home.html"> Willy's </a></li>
+    <li class="nav"><a href="checkout.html"> Checkout </a></li>
+  </ul>
+  
 
+
+      
+      <body>
+    
+    <center>
+      <p>
+    <img src="brand img.jpg">
+       </p
+    </center>
+    
+<!----------BEGINNING OF TABLE--------------------------------------------------------->  
+        <CENTER>
+    <table>
+  <tr>
+    <th> <img src = "seatshirt.jpg" height = "300" width = "300" </th>
+    <th> <img src = "t-shirt.jpg" height = "300" width = "300" </th>
+    <th> <img src = "pants.jpg" height = "300" width = "300" </th>
+  </tr>
+  <tr>
+    <td>$60</td>
+    <td>$20</td>
+    <td>$40</td>
+  </tr>
+  <tr>
+    <td> <img src = "shorts.jpg" height = "300" width = "300" </td>
+    <td> <img src = "shoes.jpg" height = "300" width = "300" </td>
+    <td> <img src = "hat.jpg" height = "300" width = "300" </td>
+  </tr>
+  <tr>
+    <td>$15</td>
+    <td>$60</td>
+    <td>$300</td>
+  </tr>
+</table>
+
+<!-----------END OF GRID TABLE--------------------------------------------------->  
+    
+    
+    
+    
+  
+  <body>
+  
+    
+    
+    <style>
+      
+      .alert {
+  padding: 20px;
+  background-color: #38AEE6;
+  color: white;
+}
+
+ul.nav {
+  list-style-type: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e847f;
+  margin: 0;
+  padding: 0;
+}
+
+
+li.nav{
+  display: inline;
+  padding: 10px;
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+body {
+  background-color: #ecc19c;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  background: #1e847f;
+}
+
+th {
+  height: 100px;
+  
+}
+
+td {
+  height: 50px;
+  vertica-align: bottom;
+  text-align: center;
+}
+tr:hover {
+  background-color: #F5F5DC;
+}
+
+
+
+.autocomplete {
+  background-color: #1e847f;
+  ;
+}
+
+#myInput {
+  width: 90%;
+  background-color: white;
+}
+
+#entireDiv {
+  margin-top: 1%;
+}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["Pants", "T-Shirts", "Shorts", "Shoes", "Sweatshirt", "Hat", "7", "8", "9", "10", "11", "12",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+    </style>
+    
+  <html>
