@@ -74,20 +74,47 @@
     <li> He was born on March 6, 1991 in California
   </ul>
   
-  <img src = "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/09/14/15/Tyler-The-Creator-Rex.jpg?width=720"
-       </img>
-  <img src = "https://media.pitchfork.com/photos/5cdc17fc93a536921a1edb5e/1:1/w_500/Tyler-the-Creator-IGOR.jpg"
-       </img>
+  <p> Social Media </p>
   
-  <img src = "https://images-na.ssl-images-amazon.com/images/I/91OeYnLoCJL._SL500_.jpg"
-       </img>
+  <ul class ="a">
+    <li> Insta: @feliciathegoat </li>
+    <li> Twitter: @tylerthecreator </li>
+  </ul>
   
-  <img src = "https://images-na.ssl-images-amazon.com/images/I/71H4GD0XjDL._SL500_.jpg"
-       </img>
+  <div class="row"> 
+  <div class="column">
+    <img src="https://media.pitchfork.com/photos/5cdc17fc93a536921a1edb5e/1:1/w_500/Tyler-the-Creator-IGOR.jpg" style="width:100%">
+    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/09/14/15/Tyler-The-Creator-Rex.jpg?width=720">
+  </div>
+    
+    
+    <div class="column">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/91OeYnLoCJL._SL500_.jpg" style="width:100%">
+    <img src="https://footwearnews.com/wp-content/uploads/2017/08/tyler-the-creator-on-stage.jpg?w=700&h=437&crop=1" style="width:100%">
+  </div>
+    
+    
+    
+    <div class="column">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Goblincover.jpg" style="width:100%">
+    <img src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/rq29ayh88lmv28nrslwt/tyler-the-creator?fimg-ssr-default" style="width:100%">
+  </div>
+    
+    <div class="column">
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/26/Cherry_Bomb_Tyler_the_Creator.png">
+    <img src="https://okayplayer-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/GettyImages-1147207760-715x477.jpg" style="width:100%">
+  </div>
+    
+    
+  </div>
+</div>
   
-  <img src = "https://upload.wikimedia.org/wikipedia/en/7/7a/Goblincover.jpg"
-       </img>
+  
+  
+  
+ 
 </body>
+</html>
 
 
 
@@ -97,6 +124,38 @@
 
 <style>
     
+
+
+ul.a {
+  font-size: 25px;
+  text-align: center;
+  background-color: #f77f00;
+  width: 400px;
+  border: 20px solid firebrick;
+  padding: 15px;
+ list-style-position: inside
+  
+}
+   
+
+li.nav{
+  display: inline;
+  padding: 10px;
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+  font-size: 120%;
+}
+
+li a:hover {
+  background-color: #111;
+  font-size: 130%;
+  color: green;
+}
+  
 h1 {
   color: black;
   font-size: 70px;
@@ -138,10 +197,60 @@ ul.a {
   width: 400px;
   border: 20px solid firebrick;
   padding: 15px;
- list-style-position: inside
+  list-style-position: inside
   
 }
-    
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
 </style>
 
 
